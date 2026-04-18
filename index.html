@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksplorasi Alam Nusantara</title>
+    <style>
+       
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #121614; 
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e2622;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #2a3530;
+        }
+
+        .nav-links a {
+            color: #a0aab2;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #4caf50;
+        }
+
+        .search-box input {
+            background-color: #2a3530;
+            border: 1px solid #3d4b44;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: white;
+            outline: none;
+        }
+
+       
+        .hero {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        
+        .main-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        
+        .article-card {
+            display: flex;
+            background-color: #1e2622;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            gap: 20px;
+            transition: transform 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            border: 1px solid #2e7d32;
+        }
+
+        .article-card img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .article-info h3 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .stats {
+            font-size: 12px;
+            color: #4caf50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .article-info p {
+            font-size: 13.5px;
+            color: #b0bec5;
+            margin-bottom: 15px;
+        }
+
+        .btn-green {
+            display: inline-block;
+            background-color: #2e7d32;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        
+        .sidebar-box {
+            background-color: #1e2622;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-box h4 {
+            color: #4caf50;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #2e7d32;
+            padding-bottom: 5px;
+        }
+
+        .sidebar-box ul {
+            list-style: none;
+        }
+
+        .sidebar-box ul li {
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #546e7a;
+            font-size: 12px;
+        }
+
+       
+        @media (max-width: 768px) {
+            .main-wrapper { grid-template-columns: 1fr; }
+            .article-card { flex-direction: column; }
+            .article-card img { width: 100%; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Wisata</a>
+            <a href="#">Edukasi</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Cari info alam...">
+        </div>
+    </header>
+
+    <div class="hero"></div>
+
+    <div class="main-wrapper">
+        <main>
+            <div class="article-card">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Danau">
+                <div class="article-info">
+                    <h3>Danau Ranu Kumbolo</h3>
+                    <p class="stats">2026 • 450,000 Peminat</p>
+                    <p>Permata tersembunyi di kaki Gunung Semeru. Tempat camping terbaik dengan pemandangan sunrise yang memukau dan udara pegunungan yang sangat bersih.</p>
+                    <a href="#" class="btn-green">Baca Selengkapnya</a>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Lembah">
+                <div class="article-info">
+                    <h3>Lembah Harau</h3>
+                    <p class="stats">2026 • 210,000 Peminat</p>
+                    <p>Dikenal sebagai Yosemite-nya Indonesia. Dikelilingi tebing granit yang menjulang tinggi dan hamparan sawah hijau yang sangat asri.</p>
+                    <a href="#" class="btn-green">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="sidebar-box">
+                <h4>Siapa Kami?</h4>
+                <ul>
+                    <li> <strong>Visi:</strong> Melestarikan keindahan alam Indonesia melalui informasi digital.</li>
+                    <li> <strong>Lokasi:</strong>Bogor, Jawa Barat.</li>
+                    <li> <strong>Vibe:</strong> Tenang, Hijau, Informatif.</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h4>Kategori Populer</h4>
+                <ul>
+                    <li><a href="#" style="color:#4caf50; text-decoration:none;">• Pegunungan Tinggi</a></li>
+                    <li><a href="#" style="color:#4caf50; text-decoration:none;">• Konservasi Hutan</a></li>
+                    <li><a href="#" style="color:#4caf50; text-decoration:none;">• Flora & Fauna</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        &copy; 2026 Pecinta Alam Nusantara - Created for Nature Exploration
+    </footer>
+</div>
+
+</body>
+</html>
